@@ -9,4 +9,4 @@ Our team for the contest was "Digiata" consisting of the following members:
 
 In the contest our team was ranked 1440 / 10724 globally, and 10 / 107 in South Africa. Below is the top-ten list for South Africa:
 
-![Hash Code Scoreboard South Africa](.\Hash Code Scoreboard South Africa.png)
+![Hash Code Scoreboard South Africa](Hash Code Scoreboard South Africa.png)

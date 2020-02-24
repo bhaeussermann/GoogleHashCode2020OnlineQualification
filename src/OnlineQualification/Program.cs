@@ -20,12 +20,16 @@ namespace OnlineQualification
 				"f_libraries_of_the_world"
 			};
 
+			int totalScore = 0;
 			foreach (string fileName in fileNames)
 			{
 				Console.Write(fileName + "...");
 
 				var problem = Read($@"..\..\..\..\input\{fileName}.txt");
 				var solution = Solve(problem, out int score);
+
+				if (!Directory.Exists(@"..\..\..\..\output"))
+					Directory.CreateDirectory(@"..\..\..\..\output");
 
 				using (var output = File.CreateText($@"..\..\..\..\output\{fileName}.txt"))
 				{
@@ -37,9 +41,11 @@ namespace OnlineQualification
 					}
 				}
 
-				Console.WriteLine("\b\b\b\t" + score);
+				Console.WriteLine($"\b\b\b\t{score:0,0}");
+				totalScore += score;
 			}
 
+			Console.WriteLine($"Total\t{totalScore:0,0}");
 			Console.WriteLine();
 			Console.WriteLine("Done. Press Enter to terminate.");
 			Console.ReadLine();
